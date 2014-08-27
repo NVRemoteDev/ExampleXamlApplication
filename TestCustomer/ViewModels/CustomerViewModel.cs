@@ -57,7 +57,7 @@ namespace TestCustomer.ViewModels
 
         #region methods
         /// <summary>
-        /// This is called from the ExampleCommand.Execute(...) function
+        /// This is called from the ChangeNameToCharlieCommand.Execute(...) function under the Commands folder
         /// </summary>
         public void ChangeNameToCharlie()
         {
