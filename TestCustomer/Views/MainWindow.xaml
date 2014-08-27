@@ -1,0 +1,15 @@
+﻿<Window x:Class="TestCustomer.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:TestCustomer.ViewModels" 
+        Title="MainWindow" Height="100" Width="400">
+    <Window.Resources>
+        <local:CustomerViewModel x:Key="ViewModel12345"/>
+    </Window.Resources>
+    <Grid DataContext="{StaticResource ViewModel12345}">
+        <TextBlock Text="Customer Name" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBox Text="{Binding CustomerModel.Name}" HorizontalAlignment="Center" VerticalAlignment="Top" Width="100"/>
+        
+        <Button Command="{Binding ChangeNameToCharlieCommand}" HorizontalAlignment="Right" VerticalAlignment="Top" Content="Change Name to Charlie"/>
+    </Grid>
+</Window>
